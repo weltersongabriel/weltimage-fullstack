@@ -1,0 +1,13 @@
+<header>
+        <nav>
+          <div class="logo-pinterest">
+            <img src="{{ url_for('static', filename='fotos_site/logo_weltimage.png') }}" alt="" width="40" height="40" />
+            <h1>WeltImage</h1>
+          </div>
+
+          <div class="restante-nav">
+            <p class="botao-perfil"><a href="{{ url_for('perfil', id_usuario=current_user.id) }}" class="link-nav">Perfil</a></p>
+            <a href="{{ url_for('logout') }}" class="link-nav">Sair</a>
+          </div>
+        </nav>
+      </header>

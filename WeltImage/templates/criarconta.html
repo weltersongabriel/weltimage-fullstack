@@ -1,0 +1,45 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+FakePinterest - Criar Conta
+{% endblock %}
+
+ {% block formulario %}
+
+        <form method="POST" class="popup">
+            {{ form.csrf_token }}
+          <div class="logo-pinterest">
+            <img src="{{ url_for('static', filename='fotos_site/logo_weltimage.png') }}" alt="" width="40" height="40" />
+            <h1>WeltImage</h1>
+          </div>
+
+          <h2>Bem-vindo(a) ao FakePinterest</h2>
+
+          <div class="div-input">
+              {{ form.email.label(class="label") }}
+                {{ form.email(class="input") }}
+          </div>
+
+            <div class="div-input">
+              {{ form.username.label(class="label") }}
+                {{ form.username(class="input") }}
+          </div>
+
+          <div class="div-input">
+            {{ form.senha.label(class="label") }}
+            {{ form.senha(class="input") }}
+          </div>
+
+          <div class="div-input">
+            {{ form.confirmacao_senha.label(class="label") }}
+            {{ form.confirmacao_senha(class="input") }}
+          </div>
+
+
+          <div class="div-botao">
+              {{ form.botao_confirmacao(class="botao-login") }}
+            <a href="{{ url_for('homepage') }}" class="link-criarconta">Já tem uma conta? Faça Login</a>
+          </div>
+
+        </form>
+          {% endblock %}
